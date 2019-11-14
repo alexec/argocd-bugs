@@ -1,18 +1,9 @@
 kind: StatefulSet
 metadata:
   annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"extensions"},"name":"web","namespace":"statefulset"},"spec":{"replicas":3,"selector":{"m
-atchLabels":{"app":"nginx"}},"serviceName":"nginx","template":{"metadata":{"labels":{"app":"nginx"}},"spec":{"containers":[{"image":"k8s.gcr.io/nginx-slim:0.8","name":"nginx","ports":[{"containerPort":80,"name":"web"}]}],"terminationGracePeriodSeconds":10}},"updateStrategy":{"type":"OnDelete"}}}
-  creationTimestamp: "2019-09-13T06:30:43Z"
   generation: 2
-  labels:
-    app.kubernetes.io/instance: extensions
   name: web
   namespace: statefulset
-  resourceVersion: "7425954"
-  selfLink: /apis/apps/v1/namespaces/statefulset/statefulsets/web
-  uid: 0308ade6-d5f0-11e9-9e69-42010aa8005f
 spec:
   podManagementPolicy: OrderedReady
   replicas: 3

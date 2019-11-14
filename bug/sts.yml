@@ -1,9 +1,7 @@
 kind: StatefulSet
+apiVersion: apps/v1beta1
 metadata:
-  annotations:
-  generation: 2
   name: web
-  namespace: statefulset
 spec:
   podManagementPolicy: OrderedReady
   replicas: 3
